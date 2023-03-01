@@ -1,0 +1,6 @@
+type Comment
+  @createModel(accountRelation: LIST, description: "comment on a post") {
+  author: DID! @documentAccount
+  version: CommitID! @documentVersion
+  text: String @string(maxLength: 2000)
+}
